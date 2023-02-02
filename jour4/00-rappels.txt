@@ -1,0 +1,70 @@
+Xampp 
+Apache
+MariaDB
+PHP
+Perl
+
+=> paramétrage via des fichiers textuels
+
+PHP =W php.ini ajouter module Xdebug
+
+Apache => httpd.conf
+
+daemon
+https:// www.igi-global.com/dictionary/nosql-database
+
+----------------------
+
+- traitement sur les tableaux => parcourir un tableaux
+
+- tableau multidimensionnel
+
+$t = [1, 2]; // indexé
+
+
+$t2 = ["prop" => 10, "prop2" => 12] // associatif
+
+$tab = [
+    ["prix" => 10.5, "enLigne" => false, notes => [1, 2]],
+    ["prix" => 500.9, "enLigne" => true, notes => [10, 5, 4]]
+];
+
+// tableau multidimensionnel avec indexé qui contient des associatifs
+// et notes est indexé
+
+-----------------------------
+
+- php a plein de fonctions natives
+
+traitement sur les variables =>
+string => echo(/ var_dump()/ format_number()/ htmlspecialchars()/ htmlentities()/ strlen()...
+
+https://www.php.net/manual.fr/function.htmlspecialchars.php
+définition => mode d'emploi
+
+htmlspecialchars(
+    string $string,
+    int $flags = ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401,
+    ?string $encoding = null,
+    bool $double_encode = true
+): string
+
+retourne un string
+4 paramètres et un seul le 1er doit être écrit
+les 3 autres ont une valeur par défaut
+
+var_dump(mixed $value, mixed ...$values): void
+
+1 mixed => paramètre $value peut prendre n'importe quel type === string/boolean/array/object/int/float
+2 mixed ...$values cette fonction prend un nombre indéterminé de paramètres de n'importe quel type
+
+void => vide la fonction ne retourne RIEN (ne contient pas de return)
+
+-----------------------
+
+require => découper un projet en plusieurs fichiers PHP
+en informatique => diviser pour mieux régner sur votre code
+
+variable => fichier de data dans un fichier > Base de données
+fonction => fichier de fonctions > Librairie
+fichier d'exécution => variable + fonction > exécution (afiicher/ envoyer un mail/ stocker/ répondre/ message d'erreur...)

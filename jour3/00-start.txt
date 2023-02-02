@@ -1,0 +1,31 @@
+Ordinateur A   travail  + repository local + git push
+
+github
+
+Ordinateur B  rien OU travail mais jamais synchronisé
+git clone ....
+
+-------
+
+Ordinateur A   travail 20% + repository local
+git pull
+
+github
+
+Ordinateur B  travail 80% + repository local + push sur github
+=> dans le dossier contient 
+git init
+git add --all
+git commit -m "description"
+
+--- créer un github => repository
+
+git branch -M main 
+git remote origin <url-debut-github>
+git push -u origin main 
+
+
+fin de journée
+git add --all
+git commit -m "description"
+git push 
