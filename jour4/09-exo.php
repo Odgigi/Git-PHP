@@ -14,7 +14,7 @@ if(!empty($_GET) && isset($_GET["nom"])){ // est-ce que j'ai une partie variable
     }
 }
 // var_dump($villes);
-// https://materializecss.com => concurrent de Bootstrap (plus de choix de couleurs)
+// https://materializecss.com => concurrent de Bootstrap (plus de choix de couleurs)/ mui
 ?>
 <!DOCTYPE html>
 <html lang="en">
