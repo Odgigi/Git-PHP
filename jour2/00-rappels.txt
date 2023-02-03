@@ -1,0 +1,65 @@
+type text: STRING
+
+// type chiffre x 2 : INT / FLOAT
+
+// type BOOLEAN: true / false
+
+// tableaux indexés (qui ressemblent aux tableaux de javascript)
+$liste = ["lundi"; "mardi", "mercredi"];
+$liste = [1, 2, 3, 4];
+$liste = [false, true, false];
+$liste = ["lundi", 1, false, 0.3];
+
+// tableaux associatifs
+$formation = [
+    "nom" => "Formation DSD", // "key" => "value"
+    "duree" => 2,
+    "unite" => "mois",
+    "adresse" => "distanciel"
+];
+
+// object
+// pour créer un objet en PHP il faut au préalable créer une class
+// l'objet est créé DEPUIS une class
+class Etudiant {}
+$etudiant = new Etudiant();
+
+Traitement par type de variable
+
+string => concaténation
+
+$p1 = "hello";
+$p2 = "world";
+
+// solution 1 concaténation avec le symbole . " "
+$solution1 = $p1 . " " . $p2;
+// solution 2 guillemets qui contiennet les variables 
+$solution2 = "$p1 $p2";
+// solution 3 guillemets qui contiennet les variables entourées d'accolades
+$solution3 = "{$p1} {$p2}";
+
+// solution 4 mix des solutions précédentes
+$solution4 = "$p1 " . $p2;
+
+// rappel en js => const a = "bonjour" + " " + "les amis" => le . en PHP remplace le + en js
+
+
+nombre int / float => addition / soustraction / multiplication / division / puissance / modulo
+$p1 = 2;
+$p2 = 50;
+$chiffre = "12";
+$total7 = $chiffre +$p2 ; // 62 => php transforme les chiffres entre "" en chiffres
+$phrase = "12 pirates";
+$total8 = $phrase + $p2; // 62 => php transforme les textes commençant par des chiffres en chiffre si vous faites un traitement
+
+
+traitements sur les booleans
+> < >= <= == === != !== // opérateurs de comparaison
+&& || ! // opérateurs boolean
+en plus il existe AND OR mais déconseillé de les utiliser
+
+structures qui permettent de changer l'ordre d'exécution d'un programme (qui est par défaut de haut en bas)
+
+for($i = 0; $i < 3; $i++){
+
+}
