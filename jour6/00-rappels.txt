@@ -1,0 +1,15 @@
+Lancer le projet Blog
+http://localhost/php-initiation/blog/index.php
+
+=> finir ce matin
+
+=> PHP POO
+
+index.php => point d'entrée de notre application web
+data.php => base de données de notre application web
+vue/ avec plusieurs fichiers relations entre url => fichiers (Router)
+
+=> wireframing => zoning
+
+
+
