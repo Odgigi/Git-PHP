@@ -1,0 +1,93 @@
+les sujets présentés hier ??? 
+
+POO = Programmation Orientée Objet 
+
+?? la semaine d'Avant en PHP ?? Programmation Procédurale
+
+-----------------------
+
+Programmation Orientée Objet => créer des objets 
+
+objet une variable qui peut stocker PLUSIEURS VALEURS (propriétés) et aussi des fonctions (méthodes)
+
+-----------------------
+
+en PHP pour créer un objet il faut au PREALABLE créer une class 
+c'est LE mécanisme pour créer un objet (il n'en existe pas d'autre en PHP)
+
+class Etudiant {} // la class Etudiant
+
+$e = new Etudiant() ; // l'objet c'est la variable $e 
+
+-----------------------
+
+créer des propriétés
+
+class Vetement {
+    public string $nom = "manteau" ;
+    public string $taille = "XL" ;
+    public float $prix = 200.50 ;
+    $enVente ; // déconseillé d'écrire juste la propriété
+    // scope public
+    // typage string / float / int / boolean / array 
+    // nom propriété commence par le symbole $ (seul le nom est OBLIGATOIRE)
+    // = 
+    // sa valeur 
+}
+
+créer des méthodes
+
+class Abonnement {
+    public function getPrix() : float{
+        return 250.9 ;
+    }
+    public function description ( int $info ) : string{
+        return "{$info} en euros" ;
+    }
+    // scope public 
+    // mot clé function 
+    // nom de la fonction 
+    // paramètres avec type hinting
+    // style de retour
+}
+
+----------------------
+
+portée des propriétés et utilisation des propriétés / méthodes 
+
+étant donné que l'on a mis le mot public devant les propriétés et les méthodes
+peuvent être donc utilisés DANS et HORS de la class
+
+DANS la class via la pseudo variable $this 
+HORS de la class via la création d'un objet 
+
+class A {
+    public string $nom = "je suis une class";
+    public function getNom () : string{
+        return $this->nom ; 
+        // utilisation de la prop $nom DANS une méthode dans la class A
+    }
+}
+
+$a = new A(); // 1 création de l'objet $a instance de la class A
+echo $a->nom ; // 2 utilisation de la prop $nom HORS de la  class A 
+
+support : 
+https://formation.webdevpro.net/php-poo 
+login : php 
+password : poo
+
+créer dans le dossier jour7 le fichier 01-exo.php 
+créer une class Immeuble 
+// contient 3 propriétés 
+// adresse 102 rue de Lille 
+// habitants tableau avec Alain / Céline / Pierre et Zorro
+// etatAscenseur  false 
+// deux méthodes 
+// infoMaintenance retourne du texte et 
+si etatAscenseur  est false => "l'ascenseur est en panne"
+si etatAscenseur  est true => "l'ascenseur est en fonction"
+// description retourne du texte et
+// Alain Zorro et Céline habitent au 102 rue de Lille 
+
+// créer la class et exécuter les méthodes infoMaintenance et description
