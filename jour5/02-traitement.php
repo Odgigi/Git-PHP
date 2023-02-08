@@ -18,7 +18,7 @@ if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
 
 
 $listeLangues = ["français", "anglais", "arabe"];
-// vérifie que la langue choisie fait bien parties de celles figurant au tableau
+// vérifie que la langue choisie fait bien partie de celles figurant au tableau
 if(!in_array($_POST["menu-langue"], $listeLangues)){
     array_push($erreurs, "La langue de la newsletter doit être choisie");
 }

@@ -1,0 +1,18 @@
+CRUD avec PHP
+
+// cas pratique
+// créer un nouveau dossier CRUD
+// créer un fichier form.PHP
+
+// créer un formulaire (utiliser Bootstrp / css/ sass / materialize)
+
+doit contenir 4 champs:
+titre input type text
+contenu textarea
+auteur input text
+dt-creation input date
+
+=> créer un fichier traitement.php
+=> récupérer les informations saisies du formuliare $_POST
+
+effectuer des vérifications avant traitement=> ajouter les informations saisies dans la table
