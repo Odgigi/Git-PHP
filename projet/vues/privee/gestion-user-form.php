@@ -1,5 +1,4 @@
-<h1>Ajouter un nouveau profil user</h1>
-
+<h1 class="mb-4">Ajouter un nouveau profil user</h1>
 <section class="row">
     <div class="col-3">
         <?php require "lib/menu-privee.php"; ?>
@@ -20,7 +19,7 @@
             </div>
             <div class="mb-3">
                 <label for="actif">
-                    <input type="checkbox" name= "actif" placeholder="statut user" >status
+                    <input type="checkbox" name= "actif" placeholder="statut user" > status
                 </label>
             </div>
             <div class="mb-3">
