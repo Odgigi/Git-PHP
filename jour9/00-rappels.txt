@@ -1,0 +1,24 @@
+class A{
+    public string $largeur = 20;
+    public string $hauteur;
+    private string $couleur;
+
+    public function __construct(string $couleur_p){ // attention au nommage (essentiel)
+        $this->couleur = $couleur_p;
+    }
+
+    public function getCouleur() : string{
+        return $this->couleur;
+    }
+}
+
+// modèle qui permet de créer des objets
+
+$a = new a("#000");
+
+$a->getCouleur();
+$a->largeur;
+
+// Pourquoi POO ? => organisation
+                => securisation
+                => plus flexible => héritage

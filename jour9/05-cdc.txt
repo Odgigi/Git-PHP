@@ -1,0 +1,72 @@
+Réaliser un mini-site avec toutes les tchnologies vues jusqu'ici
+
+Partie publique où n'importe qui peut accéder
+Accueil
+Présentation
+Login (login/password)
+Mentions légales
+Page 404
+
+Partie prévée = Back-office (il faut se connecter pour pouvoir y accéder)
+Accuei => tableau de bord
+Gestion des pages
+Gestion des utilisateurs
+Page 401 => si une personne n'est pas connectée MAIS veut accéder à une page de la partie privée
+
+9 pages à créer
+
+-------------------------------
+Wireframing => mise ne page générale du site
+url
+
+Partie publique où n'importe qui peut accéder
+Accueil => index.php
+Présentation index.php?page=presentation
+Login (login/password) index.php?page=login
+Mentions légales index.php?page=mentions
+Page 404 => tous les autres cas
+
+
+Partie privée = Back-office (il faut se connecter pour pouvoir y accéder)
+Accueil => tableau de bord => index.php?page=accueil&partie=privee
+Gestion des pages => index.php?page=page&partie=privee
+Gestion des utilisateurs => index.php?page=users&partie=privee
+Page 401 => si une personne n'est pas connectée MAIS veut accéder à une page de la partie privée => index.php?page=test&partie=privee
+
+base de données
+
+2 concepts à gérer => deux tables à gérer
+=> table pages qui contient 6 colonnes:
+id clé primaire
+titre texte maximum 255 carctères
+slug => texte sans espace sans caractères spéciaux
+contenu
+dt_creation DATE et heure
+auteur texte max. 255
+
+=> table users qui contient 6 colonnes
+id clé primaire
+nom texte maximum 255 caractères
+email texte max. 255
+mot de passe texte max. 255
+dt_creation DATE et heurestatus actif/inactif Boolean
+
+--------------------------
+architecture du site
+
+index.php
+assets/ => fichiers css / js / img / pdf / sass
+vues/public =>
+    accueil.php
+    presentation.php
+    login.php
+    404.php
+    mentions-legales.php
+vues/privee
+    tableau-bord.php
+    gestion-page.php
+    gestion-user.php
+lib/
+    class => class(entités)
+    traitements des formulaires
+    autres fonctions
