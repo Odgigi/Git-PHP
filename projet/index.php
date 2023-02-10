@@ -2,6 +2,7 @@
 session_start(); // prépare le terrain pour données formulaire + authentification
 // ajouter nom de domaine du prrojet pour éviter de l'écrire à chaque fois
 define("WWW", "http://localhost/php-initiation/projet/index.php");
+require "lib/base-de-donnee.php";
 ?>
 
 <!DOCTYPE html>
@@ -64,8 +65,25 @@ define("WWW", "http://localhost/php-initiation/projet/index.php");
         <?php elseif(!empty($_GET["page"]) && !empty($_GET["partie"]) && $_GET["page"] === "user" && ($_GET["partie"]) === "privee") :?>
             <?php if(!empty($_GET["action"]) && $_GET["action"] == "add") :?>
                 <?php require "vues/privee/gestion-user-form.php" ?>
-            <?php elseif(!empty($_GET["action"]) && $_GET["action"] == "delete") :?>
-            <?php elseif(!empty($_GET["action"]) && $_GET["action"] == "update") :?>
+            
+        <?php elseif(!empty($_GET["action"]) && $_GET["action"] == "delete") :?>
+
+            <?php $sth = $connexion->prepare('
+            DELETE FROM users WHERE id = :id');
+            $sth->execute(["id" => $_GET["id"]]);
+            header("Location: " . WWW . "?page=user&partie=privee");
+            exit;
+            ?>
+
+        <?php elseif(!empty($_GET["action"]) && $_GET["action"] == "update") :?>
+            <?php $sth = $connexion->prepare('
+            SELECT * FROM users WHERE id= :id');
+            $sth->execute(["id" => $_GET["id"]]);
+            $user = $sth->fetch();
+            // var_dump($user);
+            ?>
+            <?php require "vues/privee/gestion-user-form.php" ?>
+
             <?php else :?>
                 <?php require "vues/privee/gestion-user.php" ?>
             <?php endif ?>
