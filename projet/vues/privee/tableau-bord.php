@@ -1,3 +1,8 @@
+<?php
+// vérifier que la personne qui accède à cette page est bien connectée
+require "lib/functions.php";
+isLogged();
+?>
 <h1>Tableau de bord</h1>
 
 <section class="row">

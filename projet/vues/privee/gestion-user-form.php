@@ -1,4 +1,7 @@
-<?php if(isset($user)) :?>
+<?php 
+require "lib/functions.php";
+isLogged();
+if(isset($user)) :?>
 <h1 class="mb-4">Mettre à jour un profil user</h1>
 <?php else :?>
     <h1 class="mb-4">Ajouter un nouveau profil user</h1>

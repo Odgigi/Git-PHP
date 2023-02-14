@@ -2,6 +2,9 @@
 session_start();
 $erreurs = [];
 require "base-de-donnee.php";
+require "const.php";
+require "lib/functions.php";
+isLogged();
 
 if(empty($_POST["nom"]) || empty($_POST["email"])){
     array_push($erreurs, "Veuillez compléter les champs");
@@ -42,7 +45,7 @@ $_SESSION["form"] = $_POST; // permet de retourner les valeurs dans le formulair
 
 if(count($erreurs) === 0){
     $_SESSION["form"] = [];
-    // si le formulaire ne contient pas de champ id
+    // si le formulaire ne contient pas d'id
     if(!isset($_POST["id"])){
         // ajouter le profil en base de données
         $sth = $connexion->prepare('
@@ -66,12 +69,12 @@ if(count($erreurs) === 0){
     UPDATE users SET nom = :nom, email = :email, status = :actif, mot_de_passe = MD5(:password) WHERE id = :id ');
     $sth->execute($_POST);
 }
-    header("Location: http://localhost/php-initiation/projet/index.php?page=user&partie=privee");
+    header("Location: " . WWW . "?page=user&partie=privee");
 } else {
     $_SESSION["message"] = [
         "alert" => "danger",
         "info" => $erreurs
     ];
-    header("Location: http://localhost/php-initiation/projet/index.php?page=user&partie=privee&action=add");
+    header("Location: " . WWW . "?page=user&partie=privee&action=add");
 }
 exit;

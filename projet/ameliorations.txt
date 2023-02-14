@@ -1,0 +1,19 @@
+1 faire en sorte que les utilisateurs crént un profil avec un mot d epasse complexe Majuscule/ minuscule/ chiffre/ carcatères spéciaux
+2 télécharger nos propres images dans la gestion des pages mais aussi dans la gestion des utilisateurs3 pour tous les formulaires mettre en place un token pour éviter les attaques CSRF
+4 mettre en place un système pour changer son mot de passe
+5 MD5 pour le hashage des mots de passe trop faible => utiliser SHA1() et salt
+6 SEO => référencement naturel
+    Google analytics
+    Google search console
+    robots.txt
+    sitemap.xml
+    optimisation des balises <title> et <meta>
+7 accessibilité
+8 factorisation du code => éviter les répétitions via des class / fonctions
+9 mettre en place un système pour pouvoir automatiquement recréer les bases et la structure des tables en cas de migration (transférer un site Internet d'une machine à une autre)
+10 enlever le bandeau TinyCloud
+11 remplir un peu plus la page d'accueil du site
+12 https://themes.getbootstrap.com/phoenix-admin-dashboard-webapp-template/
+13 géréer la RGPD
+14 mettre en ligne sur hébergement
+15 internationaliser le site
